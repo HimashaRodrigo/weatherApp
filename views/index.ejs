@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="row" style="background-image: url('images/mainPageimg.jpg');
+    background-size: cover; height:700px;">
+    <div class="weatherInput">
+      <h2>Today weather information</h2>
+        <form action="/" method="post">
+          <label for="cityInput">Enter a City Name:</label>
+          <input type="text" name="cityName">
+          <button type="submit" name="button">Search</button>
+          <div class="example">
+            (examples: Colombo, London)
+          </div>
+        </form>
+      </div>
+
+      <% if(execute === "true"){ %>
+      <div class="whetherInfo">
+            <h2>The temperature in <%=cityName%> is <%=temperature%> degrees celcius.</h1>
+            <p>The weather is currently <%=description %></p>
+            <img src=<%=iconImage%>>
+      </div>
+      <% } %>
+      
+    </div>
+  </body>
+</html>

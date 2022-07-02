@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@900&family=Ubuntu:wght@400;500;700&display=swap');
+
+body{
+  margin: 0;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+
+}
+
+h2{
+  margin-top: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+input{
+  width: 16%;
+}
+
+button {
+  background-color: #e7e7e7;
+  color: black;
+  border: 2px solid #555555;
+  width: 4.5rem;
+}
+
+button:hover {
+  background-color: #555555;
+  color: white;
+  width: 4.5rem;
+  cursor: pointer;
+}
+
+.example{
+  font-size: small;
+  text-align: center;
+  padding-left: 50px;
+}
+
+@media (max-width: 1025.59px){
+  .example{
+    font-size: x-small;
+    text-align: center;
+    padding-left: 100px;
+  }
+
+}
+
+.weatherInput{
+  padding-top: 50px;
+  padding-right: 20px;
+}
+
+.whetherInfo{
+  padding-top: 80px;
+  border: 2px solid;
+  margin-top: 80px;
+  display: inline-block;
+}
