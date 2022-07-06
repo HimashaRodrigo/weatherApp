@@ -29,17 +29,14 @@ function weatherInterface(inputCityName, res){
 
   const url="https://api.openweathermap.org/data/2.5/weather?q="+inputCityName+"&units=metric&appid=1f9fd4d7f9d4dc25eab1b94ebd5c033c";
 
-  https.get(url, function (response){  //This is use for get data from someones server.
-    console.log(response.statusCode);  //status code=200, that means url is ok.
+  https.get(url, function (response){
+    console.log(response.statusCode);
 
       response.on("data", function (data){
-        // console.log(data); //gives hexadecimal values of api
-        const weatherData=JSON.parse(data);  //convert the hexadecimal values to jason format
-        console.log(weatherData);
+        const weatherData=JSON.parse(data);
 
-        const temp=weatherData.main.temp;   //get jason path (in this case temp)
-        const description=weatherData.weather[0].description; //get jason path (in this case weather's description)
-
+        const temp=weatherData.main.temp;
+        const description=weatherData.weather[0].description;
         const icon=weatherData.weather[0].icon;
         const iconImageUrl="https://openweathermap.org/img/wn/"+ icon +"@2x.png";
 
